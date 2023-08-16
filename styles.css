@@ -1,0 +1,237 @@
+/* Estilos generales */
+body {
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: #000;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+   
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header .logo {
+    margin: 0;
+    color: #ffd700; /* Dorado */
+}
+
+/* MENU */
+.menu-container {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #ffd700; /* Cambiar color al pasar el cursor */
+}
+
+
+
+/* Logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 350px;
+    border-radius: 50%;
+}
+
+
+/* Botones de redes sociales */
+.social-buttons {
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.social-button {
+    margin-bottom: 20px;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-button:hover img {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+}
+.video-bg {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    width: 100%;
+    height: 100vh; /* Ajustar la sección al alto de la ventana gráfica */
+    display: flex; /* Centrar vertical y horizontalmente el contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Cambiar el ancho del video al 90% */
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.video-bg .container {
+    z-index: 1;
+    text-align: center;
+    max-width: 80%; /* Ajustar el ancho del contenedor según tus preferencias */
+}
+
+.video-bg h2, .video-bg p, .video-bg button {
+    margin: 0;
+    color: #fff;
+}
+
+.video-bg h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.video-bg p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.video-bg button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la pantalla de carga */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Z-index alto para que esté por encima de todo */
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Color del borde del loader */
+    border-top: 5px solid #3498db; /* Color del borde superior del loader */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Animación de rotación */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para el contenedor del GIF y la barra de carga */
+.loading-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px; /* Ajustar la posición verticalmente */
+    z-index: 1; /* Establecer el índice z para que se superponga al oso */
+}
+
+/* Estilos para el oso */
+.loading-content img {
+    max-width: 200px; /* Ajustar el tamaño del oso según tus preferencias */
+}
+
+/* Estilos para la barra de carga */
+.loading-bar {
+    width: 0%;
+    height: 10px; /* Altura de la barra */
+    background-color: #3498db; /* Color de la barra */
+    position: absolute;
+    top: 35%; /* Ajustar la posición verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    transition: width 4s linear; /* Animación de 4 segundos */
+    z-index: 2; /* Asegurar que la barra se muestre encima del oso */
+}
+
+/* Estilos Proyectos.html */
+/* Estilos específicos para la página de proyectos */
+
+
+/* Estilos para el contenido de la página de proyectos */
+body.proyectos-page .proyectos-content {
+    margin: 50px auto;
+    max-width: 960px;
+    text-align: center;
+    padding: 20px;
+}
+
+body.proyectos-page .proyectos-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+body.proyectos-page .proyectos-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
